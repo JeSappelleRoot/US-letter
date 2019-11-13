@@ -54,7 +54,7 @@ Refer to the following document :
 
 # Example
 
-> View Example.pdf
+> View [Example.pdf](https://github.com/JeSappelleRoot/US-letter/files/3842633/Example.pdf)
 
 ```
 %\title{Example letter using the newlfm LaTeX package}
@@ -112,3 +112,4 @@ Refer to the following document :
     \end{newlfm}
 \end{document}
 ```
+
