@@ -1,0 +1,54 @@
+%\title{Example letter using the newlfm LaTeX package}
+%
+% Template from Overleaf
+% Modified by Scr@tch
+\documentclass[12pt,stdletter,orderfromdateto,sigright,dateleft]{newlfm}
+
+\usepackage{etoolbox}
+\usepackage{blindtext, xfrac}
+
+%% Patch from https://tex.stackexchange.com/a/395529/226 to address newlfm bug
+\makeatletter
+\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
+\makeatother
+
+%\newlfmP{dateskipbefore=50pt}
+\newlfmP{sigsize=50pt}
+%\newlfmP{sigskipbefore=50pt}
+\newlfmP{addrtoskipafter=50pt}
+\newlfmP{greettoskipafter=45pt}
+\newlfmP{Headlinewd=0pt,Footlinewd=0pt}
+ 
+ 
+% --------------------------------------------------------------- 
+
+% From 
+\namefrom{Your name HERE}
+
+% Date, can be set manually
+\dateset{\today}
+
+% Sender address
+\addrfrom{Sender address HERE}
+% Recipient address
+\addrto{Recipient address HERE}
+
+% Greet expression
+\greetto{Dear Madam, Dear Sir,}
+
+% Closing expression
+\closeline{Sincerely,}
+ 
+% ---------------------------------------------------------------  
+
+\begin{document}
+\begin{newlfm}
+
+
+% Some stuff HERE
+
+\end{newlfm}
+\end{document}
