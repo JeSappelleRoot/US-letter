@@ -40,7 +40,7 @@ You can add or remove options easily with the following documentation :
 Most of *newlfm* commands have options to set spacing, before of after.  
 
 Use spacing options like : 
-```
+```latex
 \newlfmP{dateskipbefore=50pt}
 \newlfmP{sigsize=50pt}
 \newlfmP{sigskipbefore=50pt}
@@ -56,7 +56,7 @@ Refer to the following document :
 
 > View Example.pdf
 
-```
+```latex
 %\title{Example letter using the newlfm LaTeX package}
 %
 % Template from Overleaf
