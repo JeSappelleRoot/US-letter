@@ -26,6 +26,7 @@ This LaTex template come from OverLeaf template, but it's been a little bit modi
 This allow to get a better spacing management between different parts of the letter.
 
 > Refer to : https://texblog.org/2013/11/11/latexs-alternative-letter-class-newlfm/
+> Also read : https://www.dickimaw-books.com/latex/admin/html/newlfm.shtml
 
 ## Options
 
