@@ -5,6 +5,8 @@ US-letter is a simple template to make a letter as US format.
 
 You need to edit these values : 
 - `\namefrom{Your name HERE}`, to your name
+- `\emailfrom{Your email HERE}`, to your email address
+- `\phonefrom{Your phone HERE}`, to your phone
 - `\addrfrom{Sender address HERE}`, to your postal address
 - `\addrto{Recipient address HERE}`, to the recipiant address
 
@@ -57,11 +59,7 @@ Refer to the following document :
 > View Example.pdf
 
 ```latex
-%\title{Example letter using the newlfm LaTeX package}
-%
-% Template from Overleaf
-% Modified by Scr@tch
-\documentclass[12pt,stdletter,orderfromdateto,sigright,dateleft]{newlfm}
+\documentclass[11pt, stdletter, orderfromdateto, addrfromphone, addrfromemail, sigright, dateleft]{newlfm}
 
 \usepackage{etoolbox}
 \usepackage{blindtext, xfrac}
@@ -74,9 +72,9 @@ Refer to the following document :
 \patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
 \makeatother
 
-%\newlfmP{dateskipbefore=50pt}
-\newlfmP{sigsize=10pt}
-\newlfmP{sigskipbefore=40pt}
+\newlfmP{dateskipbefore=50pt}
+\newlfmP{sigsize=50pt}
+\newlfmP{sigskipbefore=50pt}
 \newlfmP{addrtoskipafter=50pt}
 \newlfmP{greettoskipafter=45pt}
 \newlfmP{Headlinewd=0pt,Footlinewd=0pt}
@@ -84,19 +82,26 @@ Refer to the following document :
  
 % --------------------------------------------------------------- 
 
-% From 
+% From informations
 \namefrom{John Doe}
+\emailfrom{john.doe@everyone.com}
+\phonefrom{no phone}
+% Sender address
+\addrfrom{777, Jackson Avenue\\Oxford MS 38 655}
 
 % Date, can be set manually
 \dateset{\today}
 
-% Sender address
-\addrfrom{John Doe\\777, Jackson Avenue\\Oxford MS 38655}
+% To informations
+\nameto{Rick Grimes}
 % Recipient address
-\addrto{Rick Grimes\\793 Windsor St SW\\Atlanta GA 30315}
+\addrto{793 Windsor St SW\\Atlanta GA 30315}
+
+% Subject
+\regarding{About Alexandria}
 
 % Greet expression
-\greetto{Dear Rick Grimes,}
+\greetto{Dear Rick}
 
 % Closing expression
 \closeline{Sincerely,}
@@ -104,12 +109,14 @@ Refer to the following document :
 % ---------------------------------------------------------------  
 
 \begin{document}
+\begin{newlfm}
 
-    \begin{newlfm}
+% Comment \blindtext, used for demo
+    \blindtext
 
-        \blindtext
+% Your text HERE
 
-    \end{newlfm}
+\end{newlfm}
 \end{document}
 ```
 
