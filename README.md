@@ -4,11 +4,16 @@
 US-letter is a simple template to make a letter as US format.
 
 You need to edit these values : 
-- `\namefrom{Your name HERE}`, to your name
-- `\emailfrom{Your email HERE}`, to your email address
-- `\phonefrom{Your phone HERE}`, to your phone
-- `\addrfrom{Sender address HERE}`, to your postal address
-- `\addrto{Recipient address HERE}`, to the recipiant address
+- About sender:  
+  - `\namefrom{Your name HERE}`, to your name
+  - `\emailfrom{Your email HERE}`, to your email address
+  - `\phonefrom{Your phone HERE}`, to your phone
+  - `\addrfrom{Sender address HERE}`, to your postal address
+- About recipient : 
+  - `\nameto{Recipient name HERE}`, to the recipient name
+  - `\addrto{Recipient address HERE}`, to the recipiant address
+- The mail subject with changing `\regarding{Subject HERE}`
+  
 
 > You can also modify :
 > - `\dateset{\today}`, to set the date manually
